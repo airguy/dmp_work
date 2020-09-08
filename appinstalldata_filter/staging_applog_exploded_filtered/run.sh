@@ -1,4 +1,5 @@
 #!/bin/env dmp_shell_wrapper
+PWD=$(dirname $0)
 
 WORK_DATE="${DATE:0:8}"
 
@@ -33,7 +34,7 @@ set_local_params $@
 
 
 JOB_NAME="[step1/2] appinstalldata filter job by airguy"
-SCRIPT="appinstalldata_filter.py"
+SCRIPT="$PWD/appinstalldata_filter.py"
 
 echo "#####################################"
 echo $JOB_NAME
